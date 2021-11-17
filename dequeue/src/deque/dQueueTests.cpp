@@ -1,5 +1,5 @@
 #include "dQueueTests.h"
-namespace Sequential {
+namespace DQueueTests {
 void unitTests() {
   DQueue *myQueue = new DQueue{};
   for (int i = 0; i < 50; i++)
@@ -23,4 +23,4 @@ void unitTests() {
   }
   delete myQueue;
 }
-} // namespace Sequential
+} // namespace DQueueTests

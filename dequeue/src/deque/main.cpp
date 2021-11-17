@@ -1,6 +1,6 @@
 #include "dQueue.h"
 #include "dQueueTests.h"
 int main() {
-  Sequential::unitTests();
+  DQueueTests::unitTests();
   return EXIT_SUCCESS;
 }

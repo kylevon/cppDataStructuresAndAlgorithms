@@ -2,7 +2,7 @@
 #define dQueueTests_H
 #include "dQueue.h"
 #include <cassert>
-namespace Sequential {
+namespace DQueueTests {
 void unitTests();
 }
 #endif
