@@ -21,6 +21,15 @@ void unitTests() {
   for (int i = 0; i < 50; i++) {
     assert(myQueue->popLeft() == i && "pushRight and popLeft not working");
   }
+  for (int i = 0; i < 50; i++) {
+    myQueue->pushLeft(i);
+    assert(myQueue->contains(i) &&
+           "contains doesn't works when inmediately adding");
+    assert(!myQueue->contains(i + 1) && "false contains doesn't work");
+  }
+  for (int i = 0; i < 50; i++) {
+    assert(myQueue->contains(i) && "contains does not work after adding");
+  }
   delete myQueue;
 }
 } // namespace DQueueTests

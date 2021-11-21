@@ -2,16 +2,18 @@
 #define dQueue_H
 #include <cassert>
 #include <iostream>
-class QNode {
-public:
-  QNode *left;
-  QNode *right;
-  int value;
-  QNode(int value) : left{nullptr}, right{nullptr}, value{value} {}
-  ~QNode() = default;
-};
 
 class DQueue {
+protected:
+  class QNode {
+  public:
+    QNode *left;
+    QNode *right;
+    int value;
+    QNode(int value) : left{nullptr}, right{nullptr}, value{value} {}
+    ~QNode() = default;
+  };
+
 private:
   QNode *head;
   QNode *tail;
@@ -22,6 +24,7 @@ public:
   void pushRight(int value);
   int popLeft();
   int popRight();
+  bool contains(int value);
   void printQueue();
   friend std::ostream &operator<<(std::ostream &out, const DQueue &dqueue);
   ~DQueue();

@@ -59,6 +59,16 @@ int DQueue::popRight() {
   return out;
 }
 
+bool DQueue::contains(int value) {
+  QNode *currentNode{head};
+  while (currentNode != nullptr) {
+    if (currentNode->value == value)
+      return true;
+    currentNode = currentNode->right;
+  }
+  return false;
+}
+
 std::ostream &operator<<(std::ostream &out, const DQueue &dqueue) {
   QNode *currentNode{dqueue.head};
   while (currentNode != nullptr) {
